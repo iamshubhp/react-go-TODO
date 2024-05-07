@@ -1,4 +1,4 @@
-import { Container, Stack } from "@chakra-ui/react";
+import { Box, Container, Stack, Text } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
@@ -9,11 +9,16 @@ export const BASE_URL =
 function App() {
   return (
     <Stack h="100vh">
-      <Navbar />
-      <Container>
-        <TodoForm />
-        <TodoList />
-      </Container>
+      <Box>
+        <Navbar />
+        <Container>
+          <TodoForm />
+          <TodoList />
+        </Container>
+        <Text textAlign="center" fontSize="sm" py={2}>
+          Made with love by Shubh ❤️
+        </Text>
+      </Box>
     </Stack>
   );
 }
